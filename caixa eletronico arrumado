@@ -1,0 +1,42 @@
+def inicio():
+    saldo = 1000.0
+    opcao = 0
+
+    while True:
+        print("====Caixa Eletronico====\n")
+        print("1 - Consulta saldo\n")
+        print("2 - Sacar\n")
+        print("3 - Sair\n")
+        print("Escolha uma opção: ")
+        
+        try:
+            opcao = int(input())
+        except ValueError:
+            print("Opção inválida. Digite um número entre 1 e 3.")
+            continue
+            
+        if opcao == 1:
+            print("\nSeu saldo atual é: R$", saldo, "\n")
+        elif opcao == 2:
+            print("\nDigite valor para saque: R$")
+            try:
+                saque = float(input())
+            except ValueError:
+                print("Valor inválido. Digite um número.")
+                continue
+                
+            if saque > saldo:
+                print("\nSaldo insuficiente")
+            elif saque <= 0:
+                print("Valor inválido - digite um valor maior que 0\n")
+            else:
+                saldo -= saque
+                print("Saque realizado com sucesso\n")
+                print("\nNovo saldo: R$", saldo, "\n")
+        elif opcao == 3:
+            print("Saindo...")
+            break  # Sai do loop while
+        else:
+            print("Opção inválida. Digite um número entre 1 e 3.")
+
+inicio()  # Chama a função para iniciar o programa
