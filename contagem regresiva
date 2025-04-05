@@ -1,0 +1,19 @@
+programa
+{
+  funcao inicio()
+  {
+    inteiro numero
+
+    escreva("Digite o número inicial para a contagem regressiva: ")
+    leia(numero)
+    escreva(numero, "\n")
+    
+   enquanto (numero > 0)  faca
+    {
+      numero = numero - 1
+    
+    escreva ("Fim da contagem!") 
+    
+    }
+  }
+}
