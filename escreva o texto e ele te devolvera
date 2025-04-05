@@ -1,0 +1,12 @@
+programa
+{
+  funcao inicio()
+  {
+    cadeia texto
+
+    escreva("Por favor, digite um texto qualquer: ")
+    leia(texto)
+
+    escreva("Você digitou o seguinte texto: ", texto)
+  }
+}
